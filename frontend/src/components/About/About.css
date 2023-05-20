@@ -1,0 +1,197 @@
+
+
+h1{
+
+  text-align: center;
+  margin-bottom: 2%;
+
+}
+
+.about {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1200px;
+  perspective: 2000px;
+ 
+}
+
+.person {
+ 
+  background: linear-gradient(to right, 
+  rgba(217, 217, 230, 0.25) 0%,
+  rgba(255, 255, 255, 0.5) 50%,
+  rgba(217, 217, 230, 0.25) 100%);
+
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  transition: transform 0.5s ease-out;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.person:hover {
+  transform: translateZ(0px);
+  box-shadow: 0px 30px 60px -10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 30px 60px -10px rgba(132, 132, 236, 0.25); */
+
+
+/* 
+
+  box-shadow: rgba(132, 132, 236, 0.25) 0px 50px 100px -20px,
+  rgba(190, 145, 145, 0.3) 0px 30px 60px -30px; */
+}
+
+.person img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+}
+
+.person-info {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.person-info h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.person-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.person-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.person-card:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(
+    135deg,
+    rgba(128, 0, 128, 1) 0%,
+    rgba(0, 255, 255, 1) 100%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+
+.person-card:hover:before {
+  transform: scale(1);
+  opacity: 0.3;
+}
+
+
+/*  */
+
+/* Styles for screens up to 768px wide */
+@media only screen and (max-width: 768px) {
+  .about {
+    width: 90%;
+    text-align: center;
+  }
+  
+  .person {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    
+  }
+  
+  .person img {
+  
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+    margin-bottom: 20px; 
+  
+  }
+  
+  .person-info h2 {
+    font-size: 24px;
+   
+  }
+  
+  .person-info p {
+    font-size: 16px;
+   
+  }
+}
+
+/* Styles for screens up to 1024px wide */
+@media only screen and (max-width: 1024px) {
+  .about {
+    width: 90%;
+  }
+  
+  .person {
+    margin-bottom: 30px;
+  }
+  
+  .person img {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  
+  .person-info h2 {
+    font-size: 24px;
+  }
+  
+  .person-info p {
+    font-size: 16px;
+  }
+}
+
+/* Styles for screens wider than 1024px */
+@media only screen and (min-width: 1024px) {
+  .about {
+    width: 80%;
+  }
+  
+  .person {
+    margin-bottom: 50px;
+  }
+  
+  .person img {
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+  }
+  
+  .person-info h2 {
+    font-size: 28px;
+  }
+  
+  .person-info p {
+    font-size: 18px;
+  }
+}

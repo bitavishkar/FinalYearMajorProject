@@ -1,0 +1,105 @@
+/* ImageLoad.css */ 
+.image-load { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: 4% 0 1%; 
+
+} 
+
+
+.image-container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin: 10px; 
+  padding: 10px; 
+  background-color: #fff; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+   
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+} 
+
+
+ 
+.image-container:hover { 
+  transform: perspective(1000px) rotateX(0deg) translateY(-10px); 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+} 
+
+
+
+ 
+.image-container img { 
+  width: 300px; 
+  height: 300px; 
+  object-fit:fill; 
+  margin-bottom: 10px; 
+  border-radius: 10px; 
+} 
+ 
+.image-container p { 
+  font-size: 18px; 
+  font-weight: bold; 
+  margin-top: 10px; 
+} 
+ 
+@media only screen and (max-width: 768px) { 
+  .image-load { 
+    flex-direction: column; 
+  } 
+ 
+  .image-container:first-child { 
+    margin-right: 0; 
+    margin-bottom: 30px; 
+  } 
+} 
+ 
+@media only screen and (max-width: 480px) { 
+  .image-container img { 
+    max-width: 100%; 
+    margin: 10px 0; 
+  } 
+} 
+
+@media only screen and (max-width: 768px) { 
+  .image-load { 
+    margin: 10% 0; 
+  } 
+} 
+
+
+
+
+.reload-container { 
+
+  display:flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto 20px; 
+
+} 
+
+.reload-button{ 
+
+font-size: 16px; 
+font-weight: 700; 
+color: #fff; 
+background-color: #0072c6; 
+border: none; 
+border-radius: 5px; 
+padding: 10px 20px; 
+cursor: pointer; 
+transition: background-color 0.2s ease-in-out; 
+line-height: 1.2; 
+margin-top: 10px; 
+
+} 
+
+
+button:hover { 
+/* background-color: #3e8e41; */ 
+background-color: #005ea3; 
+}
